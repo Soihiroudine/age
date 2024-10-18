@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul age</title>
+    <link rel="stylesheet" href="css/calculAge.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Calcul age</h1>
+        </header>
+
+        <section id="formulaire">
+            <!-- <form method="post" action="#"> -->
+                <section id="name">
+                    <label for="nom">Nom : </label>
+                    <input type="text" placeholder="nom " name="nom" id="nom" required>
+                </section>
+
+                <section id="yourName">
+                    <label for="prenom">Prenom : </label>
+                    <input type="text" placeholder="prenom " name="prenom" id="prenom" required>
+                </section>
+
+                <section id="category">
+                    <label for="categoryPro">Votre category : </label>
+                    <input list="valeurCategory" name="categoryPro" id="categoryPro" placeholder="Section">
+
+                    <datalist id="valeurCategory">
+                       <!-- Category professionnel : voir js -->
+                    </datalist>
+                </section>
+
+                <section id="annee">
+                    <label for="anneeNaissance">Naissance : </label>
+                    <input type="number" name="anneeNaissance" id="anneeNaissance" placeholder="annee de naissance"
+                        required>
+                </section>
+
+                <section id="bouton">
+                    <input type="submit" value="Entrer" id="button">
+                </section>
+            <!-- </form> -->
+        </section>
+
+        <section id="affichage">
+            <p>Votre age : </p>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="js/calculAge.js"></script>
+</body>
+
+</html>

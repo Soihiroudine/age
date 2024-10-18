@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+/* Entête de la page */
+header {
+    padding: 2em;
+}
+
+
+/* Le formulaire */
+#formulaire{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#formulaire section {
+    padding: 1em;
+}
+
+#button {
+    cursor: pointer;
+}
