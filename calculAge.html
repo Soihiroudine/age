@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Calcul age</h1>
-        </header>
+    <header>
+        <h1>Calcul age</h1>
+    </header>
 
+    <main>
         <section id="formulaire">
-            <!-- <form method="post" action="#"> -->
+            <form method="post" action="#">
                 <section id="name">
                     <label for="nom">Nom : </label>
                     <input type="text" placeholder="nom " name="nom" id="nom" required>
@@ -28,7 +28,7 @@
 
                 <section id="category">
                     <label for="categoriesPro">Votre category : </label>
-                    <input list="valeurCategorie" name="categoriesPro" id="categoriesPro" placeholder="Section">
+                    <input list="valeurCategorie" name="categoriesPro" id="categoriesPro" placeholder="Categories professionnel" required>
 
                     <datalist id="valeurCategorie">
                        <!-- Category professionnel : voir js -->
@@ -41,10 +41,10 @@
                         required>
                 </section>
 
-                <section id="bouton">
+                <!-- <section id="bouton">
                     <input type="submit" value="Entrer" id="button">
-                </section>
-            <!-- </form> -->
+                </section> -->
+            </form>
         </section>
 
         <section id="affichage">

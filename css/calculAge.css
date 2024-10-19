@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: #17202a;
 }
 
 main {
@@ -14,16 +15,58 @@ header {
 
 
 /* Le formulaire */
-#formulaire{
+#formulaire form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1em;
+    border-bottom: 2px solid;
 }
 
 #formulaire section {
     padding: 1em;
 }
 
-#button {
+#formulaire label {
+    display: none;
+}
+
+#formulaire input {
+    border: none;
+    outline: none;
+    background-color: #fcf3cf;
+    padding: 1em;
+    border-radius: 10%;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#formulaire input:focus {
+    background-color: #d6eaf8;
+}
+
+#formulaire #button {
+    background-color: #17202a;
+    color: #fcf3cf;
     cursor: pointer;
 }
+
+#formulaire #button:hover {
+    background-color: #f0d66e;
+    color: #17202a;
+}
+
+#affichage {
+    margin: 2em;
+}
+
+#affichage p {
+    padding: 0.5em 1em;
+    font-size: 1.1em;
+    font-weight: bold
+}
+
+/* @media screen and (max-wdth:260px) {
+    
+} */
