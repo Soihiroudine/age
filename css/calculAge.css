@@ -15,7 +15,7 @@ header {
 
 
 /* Le formulaire */
-#formulaire form{
+#formulaire {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -42,6 +42,7 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
 #formulaire input:focus {
     background-color: #d6eaf8;
     border-bottom: 2px solid #17202a;
@@ -61,6 +62,9 @@ header {
 
 #affichage {
     margin: 2em;
+    border: 2px solid #17202a;
+    padding: 2em;
+    height: auto;
 }
 
 #affichage p {

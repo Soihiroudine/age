@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcul age</title>
     <link rel="stylesheet" href="css/calculAge.css">
+    <script type="text/javascript" src="js/calculAge.js" defer></script>
 </head>
 
 <body>
@@ -15,51 +16,50 @@
 
     <main>
         <section id="formulaire">
-            <form method="post" action="#">
-                <section id="name">
-                    <label for="nom">Nom : </label>
-                    <input type="text" placeholder="nom " name="nom" id="nom" required>
-                </section>
+            <section id="name">
+                <label for="nom">Nom : </label>
+                <input type="text" placeholder="nom " name="nom" id="nom">
+            </section>
 
-                <section id="yourName">
-                    <label for="prenom">Prenom : </label>
-                    <input type="text" placeholder="prenom " name="prenom" id="prenom" required>
-                </section>
+            <section id="yourName">
+                <label for="prenom">Prenom : </label>
+                <input type="text" placeholder="prenom " name="prenom" id="prenom">
+            </section>
 
-                <!-- <section id="radio">
-                    <p>
+            <!-- <section id="radio">
+                section#
                         Etudiant : <input type="radio" name="categorie"/>
                         Salarié : <input type="radio" name="categorie"/>
                     </p>
                 </section> -->
 
-                <section id="category">
-                    <label for="categoriesPro">Votre category : </label>
-                    <input list="valeurCategorie" name="categoriesPro" id="categoriesPro" placeholder="Categories professionnel" required>
+            <section id="category">
+                <label for="categoriespro">Votre category : </label>
+                <input list="valeurcategorie" name="categoriespro" id="categoriespro"
+                    placeholder="Categories professionnel">
 
-                    <datalist id="valeurCategorie">
-                       <!-- Category professionnel : voir js -->
-                    </datalist>
-                </section>
+                <datalist id="valeurcategorie">
+                    <!-- <option value="Etudiant">
+                    <option value="Salarier"> -->
+                    <!-- Category professionnel : voir js -->
+                </datalist>
+            </section>
 
-                <section id="annee">
-                    <label for="anneeNaissance">Naissance : </label>
-                    <input type="number" name="anneeNaissance" id="anneeNaissance" placeholder="annee de naissance"
-                        required>
-                </section>
+            <section id="annee">
+                <label for="anneenaissance">Naissance : </label>
+                <input type="number" name="anneenaissance" id="anneenaissance" placeholder="annee de naissance">
+            </section>
 
-                <!-- <section id="bouton">
-                    <input type="submit" value="Entrer" id="button">
-                </section> -->
-            </form>
+            <section id="bouton">
+                <input type="submit" value="Valider" id="button">
+            </section>
         </section>
 
         <section id="affichage">
-            <p>Votre age : <span></span></p>
+            <p></p>
         </section>
     </main>
 
-    <script type="text/javascript" src="js/calculAge.js"></script>
 </body>
 
 </html>

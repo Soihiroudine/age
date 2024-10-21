@@ -1,11 +1,7 @@
 // declaration de variable des elements qui vont etre recuperer dans le html
-let nom, prenom, categoriesPro;
-let annee = document.querySelector("#anneeNaissance");
-let boutton = document.querySelector("#button");
-let valeurInputCategorie = document.querySelector("#valeurCategorie");
-
-// L'annee de la date actuelle
-const anneeActuelle = new Date().getFullYear();
+let nom, prenom, categoriesPro, anneeNaissance;
+let bouton = document.querySelector("#button");
+let valeurInputCategorie = document.querySelector("#valeurcategorie");
 
 // Les categories professionnel 
 // On lui donne une liste des categories 
@@ -29,14 +25,16 @@ function valeurDansTableau(valeur, tableau) {
 }
 
 // calcul de l'age 
-function calculAge(ans) {
-    return anneeActuelle - ans;
+function calculAge(anneeDeNaissance) {
+    // L'annee de la date actuelle
+    const anneeActuelle = new Date().getFullYear();
+    return anneeActuelle - anneeDeNaissance;
 }
 
 // Creation d'une fonction
 // elle va créer un span et va lui mettre une valeur html
 function afficheSpan(valeur) {
-    let span = document.querySelector("span");
+    let span = document.createElement("span");
     span.innerHTML = valeur;
     return span;
 }
@@ -46,18 +44,26 @@ for (let index = 0; index < categories.length; index++) {
     valeurInputCategorie.appendChild(optionCategories(categories[index]));
 }
 
-// Declanchement de l'action affichage de l'age quand le bouton "entrer" est clicker
-// boutton.addEventListener("click", afficheTexte);
+// Declanchement de l'action affichage de l'age quand le bouton "valider" est clicker
+bouton.addEventListener("click", () => {
+    // Recuperation des donner nom, prenom et annee de l'input
+    nom = document.querySelector("#nom").value;
+    prenom = document.querySelector("#prenom").value;
+    anneeNaissance = document.querySelector("#anneenaissance").value;
 
-// Quand on va mettre un nombre dans le champs input:number de l'annee 
-// il va automatiquement afficher l'age
-annee.addEventListener("change", () => {
-    annee = document.querySelector("#anneeNaissance");
-    let age = calculAge(annee.value);
+    // Calcul de l'age 
+    let age = calculAge(anneeNaissance);
+
+    // Selectionner de la balise p qui a pour parent #affichage
     let affichage = document.querySelector("#affichage p");
-    if (annee > anneeActuelle/*  || categoriesPro === "" || */) {
-        alert("Veuiller mettre une année inférieur à l'année actuelle");
-    } else {
-        affichage.appendChild(afficheSpan(age));
-    }
+
+    // On va faire en sorte que il affiche l'age
+    let phrase = "Bonjour" + ". Vous avez " + age + " ans";
+    affichage.innerHTML = phrase;
+
+    // Verification que nom et prenom ont bien été pris
+    console.log("Année : " + anneeNaissance);
+    console.log("nom : " + nom);
+    console.log("Prenom : " + prenom);
+
 });
