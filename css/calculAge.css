@@ -35,25 +35,27 @@ header {
 #formulaire input {
     border: none;
     outline: none;
-    background-color: #fcf3cf;
+    background-color: #f5b041;
     padding: 1em;
-    border-radius: 10%;
+    border-radius: 0.375em;
     font-size: 1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #formulaire input:focus {
     background-color: #d6eaf8;
+    border-bottom: 2px solid #17202a;
+    padding-bottom: 0.875em;
 }
 
 #formulaire #button {
     background-color: #17202a;
-    color: #fcf3cf;
+    color: #f5b041    ;
     cursor: pointer;
 }
 
 #formulaire #button:hover {
-    background-color: #f0d66e;
+    background-color:  #f5b041    ;
     color: #17202a;
 }
 
@@ -67,6 +69,11 @@ header {
     font-weight: bold
 }
 
-/* @media screen and (max-wdth:260px) {
-    
-} */
+@media screen and (max-width: 300px) {
+    #affichage {
+        margin: 1em;
+    }
+    #affichage p {
+        padding: 0.1em 0.4em;
+    }
+}
