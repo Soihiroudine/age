@@ -1,7 +1,8 @@
 // declaration de variable des elements qui vont etre recuperer dans le html
 let nom, prenom, categoriesPro, anneeNaissance;
-let bouton = document.querySelector("#button");
+let bouton = document.querySelector("#valider");
 let valeurInputCategorie = document.querySelector("#valeurcategorie");
+let affichage = document.querySelector("#affichage");
 
 // Les categories professionnel 
 // On lui donne une liste des categories 
@@ -11,6 +12,7 @@ let categories = ["Etudiant", "Salarier"];
 function optionCategories(donnee) {
     let option = document.createElement("option");
     option.setAttribute("value", donnee);
+    option.innerHTML = donnee;
     // option.innerHTML = donnee;
     return option;
 }
@@ -31,12 +33,19 @@ function calculAge(anneeDeNaissance) {
     return anneeActuelle - anneeDeNaissance;
 }
 
+function majeur(age) {
+    if (age >= 18 ) {
+        return "majeur";
+    }
+    return "mineur";
+}
+
 // Creation d'une fonction
-// elle va créer un span et va lui mettre une valeur html
-function afficheSpan(valeur) {
-    let span = document.createElement("span");
-    span.innerHTML = valeur;
-    return span;
+// elle va créer un paragraphe et va lui mettre un texte
+function paragraphe(texte) {
+    let para = document.createElement("p");
+    para.innerHTML = texte;
+    return para;
 }
 
 // La boucle va permettre d'ajouter les categories dans le code html
@@ -54,16 +63,19 @@ bouton.addEventListener("click", () => {
     // Calcul de l'age 
     let age = calculAge(anneeNaissance);
 
-    // Selectionner de la balise p qui a pour parent #affichage
-    let affichage = document.querySelector("#affichage p");
+    // On va faire ne sorte que l'affichage soit clean
+    affichage.innerHTML = "";
 
-    // On va faire en sorte que il affiche l'age
-    let phrase = "Bonjour" + ". Vous avez " + age + " ans";
-    affichage.innerHTML = phrase;
+    // affichage.appendChild(paragraphe(phrase));
+    let regle2 = `Vous avez ${age} ans.`;
+    affichage.appendChild(paragraphe(regle2));
+
+    let regle3Et4 = `${nom} ${prenom}, vous etes ${majeur(age)}.`;
+    affichage.appendChild(paragraphe(regle3Et4));
 
     // Verification que nom et prenom ont bien été pris
-    console.log("Année : " + anneeNaissance);
     console.log("nom : " + nom);
     console.log("Prenom : " + prenom);
+    console.log("Année : " + anneeNaissance);
 
 });
