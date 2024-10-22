@@ -34,7 +34,6 @@ header {
 }
 
 #formulaire label {
-    /* display: none; */
     width: 30%;
 }
 
@@ -50,6 +49,7 @@ header {
 }
 
 #formulaire select {
+    cursor: pointer;
     border: none;
     outline: none;
     background-color:#eaecee;
@@ -67,6 +67,10 @@ header {
 }
 
 
+#formulaire #categorieoption {
+    color:#808b96;
+}
+
 #formulaire #bouton {
     display: flex;
     justify-content: center;
@@ -82,8 +86,8 @@ header {
 #formulaire #valider:hover {
     background-color: #d6eaf8;
     color: #17202a;
-    padding: 1.2em;
-    margin: -0.2em -0.2em;
+    padding: 2.2em;
+    margin: -1.2em -1.2em;
     border-radius: 40px;
 }
 
@@ -99,8 +103,6 @@ header {
     font-size: 1.1em;
     font-weight: bold
 }
-
-
 
 @media screen and (max-width: 500px) {
     main {
@@ -118,9 +120,19 @@ header {
         width: 90%;
     }
 
+    #formulaire #valider:hover {
+        background-color: #17202a;
+        color: #d6eaf8;
+        /* padding: 2.2em;
+        margin: -1.2em -1.2em;
+        border-radius: 40px; */
+    }
+
     #affichage {
         margin: 1em;
         border: none;
     }
+
+
 }
 

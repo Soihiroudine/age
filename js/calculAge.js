@@ -1,7 +1,7 @@
 // declaration de variable des elements qui vont etre recuperer dans le html
 let nom, prenom, categoriesPro, anneeNaissance;
 let bouton = document.querySelector("#valider");
-let valeurInputCategorie = document.querySelector("#valeurcategorie");
+let valeurCategorie = document.querySelector("#valeurcategorie");
 let affichage = document.querySelector("#affichage");
 
 // Les categories professionnel 
@@ -13,17 +13,7 @@ function optionCategories(donnee) {
     let option = document.createElement("option");
     option.setAttribute("value", donnee);
     option.innerHTML = donnee;
-    // option.innerHTML = donnee;
     return option;
-}
-
-// Fonction qui veirifie que la valeur rechercher est bien dans notre tableau
-// On va l'utiliser en premier lieu pour s'assurer que l'utilisateur a bien selectionner une valeur définit
-function valeurDansTableau(valeur, tableau) {
-    for (let index = 0; index > tableau.length; index++) {
-        if (tableau[index] === valeur) { return true; }
-    }
-    return false;
 }
 
 // calcul de l'age 
@@ -33,11 +23,11 @@ function calculAge(anneeDeNaissance) {
     return anneeActuelle - anneeDeNaissance;
 }
 
+// verification que l'age est superieur ou egale à 18
 function majeur(age) {
-    if (age >= 18 ) {
+    if (age >= 18) {
         return "majeur";
-    }
-    return "mineur";
+    } return "mineur";
 }
 
 // Creation d'une fonction
@@ -50,32 +40,41 @@ function paragraphe(texte) {
 
 // La boucle va permettre d'ajouter les categories dans le code html
 for (let index = 0; index < categories.length; index++) {
-    valeurInputCategorie.appendChild(optionCategories(categories[index]));
+    valeurCategorie.appendChild(optionCategories(categories[index]));
 }
+
 
 // Declanchement de l'action affichage de l'age quand le bouton "valider" est clicker
 bouton.addEventListener("click", () => {
+    // On va faire ne sorte que l'affichage soit clean
+    affichage.innerHTML = "";
+    // console.clear()
+
     // Recuperation des donner nom, prenom et annee de l'input
     nom = document.querySelector("#nom").value;
     prenom = document.querySelector("#prenom").value;
     anneeNaissance = document.querySelector("#anneenaissance").value;
+    let age;
 
-    // Calcul de l'age 
-    let age = calculAge(anneeNaissance);
+    // Il va verifier si nom, prenom et annee ne sont pas vide
+    if (nom !== "" && prenom !== "" && anneeNaissance !== "") {
+        // Calcul de l'age 
+        age = calculAge(anneeNaissance);
+        let regle2 = `Vous avez ${age} ans.`;
+        affichage.appendChild(paragraphe(regle2));
 
-    // On va faire ne sorte que l'affichage soit clean
-    affichage.innerHTML = "";
+        let regle3Et4 = `${nom} ${prenom}, vous etes ${majeur(age)}.`;
+        affichage.appendChild(paragraphe(regle3Et4));
 
-    // affichage.appendChild(paragraphe(phrase));
-    let regle2 = `Vous avez ${age} ans.`;
-    affichage.appendChild(paragraphe(regle2));
-
-    let regle3Et4 = `${nom} ${prenom}, vous etes ${majeur(age)}.`;
-    affichage.appendChild(paragraphe(regle3Et4));
-
-    // Verification que nom et prenom ont bien été pris
-    console.log("nom : " + nom);
-    console.log("Prenom : " + prenom);
-    console.log("Année : " + anneeNaissance);
-
+        // On vavouloir acceder a la selection des option
+        for (let index = 0; index < valeurCategorie.length; index++) {
+            // On va faire en sorte
+            if (valeurCategorie[index].innerHTML !== "Categorie professionnel" && valeurCategorie[index].selected) {
+                console.log(valeurCategorie[index].innerHTML);
+                break;
+            }
+        }
+    } else {
+        // 
+    }
 });
