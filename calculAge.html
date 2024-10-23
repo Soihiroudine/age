@@ -6,48 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcul age</title>
     <link rel="stylesheet" href="css/calculAge.css">
-    <script type="text/javascript" src="js/calculAge.js" defer></script>
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- <script type="text/javascript" src="js/calculAge.js" defer></script> -->
 </head>
 
 <body>
     <header>
-        <h1>Calcul age</h1>
+        <h1>Jeu de calcul automatique de l’âge</h1>
+        <h2>L’application le plus fiable pour connaître votre âge.</h2>
+        <h3>Vous serez heureux d’apprendre votre âge.</h3>
     </header>
 
     <main>
-        <section id="formulaire">
-            <section id="name">
-                <label for="nom">Nom </label>
-                <input type="text" placeholder="nom " name="nom" id="nom">
-            </section>
+        <div class="personne">
+            <p>Veuillez saisir votre nom et votre prénom</p>
+            <div class="identite">
+                <section id="name">
+                    <label for="nom">Nom </label>
+                    <input type="text" placeholder="nom " name="nom" id="nom">
+                </section>
 
-            <section id="yourName">
-                <label for="prenom">Prenom </label>
-                <input type="text" placeholder="prenom " name="prenom" id="prenom">
-            </section>
+                <section id="yourName">
+                    <label for="prenom">Prenom </label>
+                    <input type="text" placeholder="prenom " name="prenom" id="prenom">
+                </section>
+            </div>
+        </div>
 
-            <section id="category">
-                <label for="valeurcategorie">Votre category professionnel</label>
+        <div class="situation">
+            <div class="etudiant">
+                <label for="etudiant">Etudiant </label>
+                <input type="radio" name="situation" id="etudiant" value="Etudiant">
+            </div>
+
+            <div class="salarier">
+                <label for="salarier">Salarier </label>
+                <input type="radio" name="situation" id="salarier" value="Salarier">
+            </div>
+            <!-- <label for="valeurcategorie">Votre category professionnel</label>
 
                 <select id="valeurcategorie">
                     <option value="" id="categorieoption">Categorie professionnel</option>
-                </select>
-            </section>
+                </select> -->
+        </div>
 
-            <section id="annee">
-                <label for="anneenaissance">Naissance </label>
-                <input type="number" name="anneenaissance" id="anneenaissance" placeholder="annee de naissance">
-            </section>
+        <div class="anneeNaissance">
+            <label for="anneenaissance">Naissance </label>
+            <input type="number" name="anneenaissance" id="anneenaissance" placeholder="annee de naissance">
+        </div>
 
-            <section id="bouton">
-                <input type="submit" value="Valider" id="valider">
-            </section>
-        </section>
+        <div class="messageAffiche">
+            <!-- Message  -->
+        </div>
 
-        <section id="affichage">
-            <!-- Ici : va permettre l'affichage  -->
-        </section>
+        <div class="boutonValider">
+            <input type="submit" value="Valider" id="valider">
+        </div>
     </main>
+
+    <footer>
+        <p>Le site est développé par Soihiroudine dans le cadre de la formation Développeur Web et Web
+            Mobile organisée par Ndovoo et <a href="https://www.cariforef-mayotte.yt" target="_blank">CARIF-OREF 976</a>.</p>
+        <p>Tous droits réservés 2024</p>
+    </footer>
 
 </body>
 
