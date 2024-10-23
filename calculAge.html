@@ -7,7 +7,12 @@
     <title>Calcul age</title>
     <link rel="stylesheet" href="css/calculAge.css">
     <link rel="stylesheet" href="css/footer.css">
-    <!-- <script type="text/javascript" src="js/calculAge.js" defer></script> -->
+    <script type="text/javascript" src="js/calculAge.js" defer></script>
+
+    <!-- Font : jetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,20 +39,18 @@
         </div>
 
         <div class="situation">
-            <div class="etudiant">
-                <label for="etudiant">Etudiant </label>
-                <input type="radio" name="situation" id="etudiant" value="Etudiant">
+            <span>Categories </span>
+            <div class="choix">
+                <div class="etudiant">
+                    <label for="etudiant">Etudiant </label>
+                    <input type="radio" name="situation" id="etudiant" value="Etudiant">
+                </div>
+    
+                <div class="salarier">
+                    <label for="salarier">Salarier </label>
+                    <input type="radio" name="situation" id="salarier" value="Salarier">
+                </div>
             </div>
-
-            <div class="salarier">
-                <label for="salarier">Salarier </label>
-                <input type="radio" name="situation" id="salarier" value="Salarier">
-            </div>
-            <!-- <label for="valeurcategorie">Votre category professionnel</label>
-
-                <select id="valeurcategorie">
-                    <option value="" id="categorieoption">Categorie professionnel</option>
-                </select> -->
         </div>
 
         <div class="anneeNaissance">
@@ -67,7 +70,7 @@
     <footer>
         <p>Le site est développé par Soihiroudine dans le cadre de la formation Développeur Web et Web
             Mobile organisée par Ndovoo et <a href="https://www.cariforef-mayotte.yt" target="_blank">CARIF-OREF 976</a>.</p>
-        <p>Tous droits réservés 2024</p>
+        <p>Tous droits réservés <span id="annee"></span></p>
     </footer>
 
 </body>

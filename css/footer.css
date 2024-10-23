@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 1em;
+    
+    background-color: #191933;
+    color: #A6A6B3;
+}
+
+footer a {
+    color: #FFE8E8;
+}
