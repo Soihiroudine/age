@@ -8,6 +8,10 @@ footer {
     color: #A6A6B3;
 }
 
+footer p {
+    padding: 1em;
+}
+
 footer a {
     color: #FFE8E8;
 }

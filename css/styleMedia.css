@@ -1,0 +1,21 @@
+@media screen and (max-width: 540px) {
+    main {
+        width: 100%;
+    }
+    label:not(label[for="salarier"], label[for="etudiant"]){
+        display: none;
+    }
+    
+    .anneeNaissance input, .identite input{
+        width: 90%;
+    }
+
+    .messageAffiche {
+        width: 100%;
+    }
+
+    .situation span {
+        display: none;
+    }
+
+}

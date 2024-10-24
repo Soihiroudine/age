@@ -58,12 +58,13 @@ main {
     width: 60%;
     border-radius: 0.375em;
     font-size: 1em;
+    font-weight: bold;
     line-height: 1.1px;
 }
 
 input:focus:not(#valider) /* select:focus */{
     background-color: #c1ceda;
-    border-bottom: 2px solid #17202a;
+    border-bottom: 0.125em solid #17202a;
     padding-bottom: 0.875em;
 }
 
@@ -94,18 +95,12 @@ input:focus:not(#valider) /* select:focus */{
 }
 
 /* Partie message du html */
-.messageAffiche {
-    /* margin: 2em; */
-    /* border: 2px solid #17202a; */
-    /* padding: 2em; */
-}
 
 .messageAffiche p {
     padding: 1em;
     font-size: 1.1em;
     font-weight: bold
 }
-
 
 /* Notre bouton valider */
 
@@ -136,26 +131,4 @@ input:focus:not(#valider) /* select:focus */{
     color: #191933;
     padding: 1em;
     margin: -0.3em;
-}
-
-@media screen and (max-width: 540px) {
-    main {
-        width: 100%;
-    }
-    label:not(label[for="salarier"], label[for="etudiant"]){
-        display: none;
-    }
-    
-    .anneeNaissance input, .identite input{
-        width: 90%;
-    }
-
-    .messageAffiche {
-        width: 100%;
-    }
-
-    .situation span {
-        display: none;
-    }
-
 }
