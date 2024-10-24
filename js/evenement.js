@@ -3,7 +3,7 @@ let blockMessage = document.querySelector(".messageAffiche");
 
 let dateAujourdHui = new Date();
 
-let nom = document.querySelector("#nom");
+nom = document.querySelector("#nom");
 
 function paragraphe(texte) {
     let para = document.createElement("p");

@@ -12,6 +12,11 @@ footer p {
     padding: 1em;
 }
 
+footer .enVue {
+    color: #FFE8E8;
+    font-weight: bold;
+}
+
 footer a {
     color: #FFE8E8;
 }

@@ -87,6 +87,7 @@ input:focus:not(#valider) /* select:focus */{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-right: 1em;
 }
 .situation input {
     width: 10%;

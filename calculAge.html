@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcul age</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/styleMedia.css">
 
-    <!-- <script type="text/javascript" src="js/calculAge.js" defer></script> -->
+    <script type="text/javascript" src="js/calculAge.js" defer></script>
     <script src="js/evenement.js" defer></script>
+    <script src="js/reglevalidation.js" defer></script>
 
     <!-- Font : jetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,53 +28,56 @@
     </header>
 
     <main>
-        <div class="personne">
-            <p>Veuillez saisir votre nom et votre prénom</p>
-            <div class="identite">
-                <section id="name">
-                    <label for="nom">Nom </label>
-                    <input type="text" placeholder="nom " name="nom" id="nom">
-                </section>
-
-                <section id="yourName">
-                    <label for="prenom">Prenom </label>
-                    <input type="text" placeholder="prenom " name="prenom" id="prenom">
-                </section>
-            </div>
-        </div>
-
-        <div class="situation">
-            <span>Categories </span>
-            <div class="choix">
-                <div class="etudiant">
-                    <label for="etudiant">Etudiant </label>
-                    <input type="radio" name="situation" id="etudiant" value="Etudiant">
-                </div>
+        <form>
+            <div class="personne">
+                <p>Veuillez saisir votre nom et votre prénom</p>
+                <div class="identite">
+                    <section id="name">
+                        <label for="nom">Nom </label>
+                        <input type="text" placeholder="nom " name="nom" id="nom">
+                    </section>
     
-                <div class="salarier">
-                    <label for="salarier">Salarier </label>
-                    <input type="radio" name="situation" id="salarier" value="Salarier">
+                    <section id="yourName">
+                        <label for="prenom">Prenom </label>
+                        <input type="text" placeholder="prenom " name="prenom" id="prenom">
+                    </section>
                 </div>
             </div>
-        </div>
-
-        <div class="anneeNaissance">
-            <label for="anneenaissance">Naissance </label>
-            <input type="number" name="anneenaissance" id="anneenaissance" placeholder="annee de naissance">
-        </div>
+    
+            <div class="situation">
+                <span>Categories </span>
+                <div class="choix">
+                    <div class="etudiant">
+                        <label for="etudiant">Etudiant </label>
+                        <input type="radio" name="situation" id="etudiant" value="Etudiant">
+                    </div>
+        
+                    <div class="salarier">
+                        <label for="salarier">Salarier </label>
+                        <input type="radio" name="situation" id="salarier" value="Salarier">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="anneeNaissance">
+                <label for="anneenaissance">Naissance </label>
+                <input type="number" name="anneenaissance" id="anneenaissance" placeholder="annee de naissance">
+            </div>
+    
+            <div class="boutonValider">
+                <input type="submit" value="Valider" id="valider">
+            </div>
+        </form>
 
         <div class="messageAffiche">
             <!-- Message  -->
         </div>
-
-        <div class="boutonValider">
-            <input type="submit" value="Valider" id="valider">
-        </div>
+        
     </main>
 
     <footer>
-        <p>Le site est développé par Soihiroudine dans le cadre de la formation Développeur Web et Web
-            Mobile organisée par Ndovoo et <a href="https://www.cariforef-mayotte.yt" target="_blank">CARIF-OREF 976</a>.</p>
+        <p>Le site est développé par <a href="https://github.com/Soihiroudine">Soihiroudine</a> dans le cadre de la formation <span class="enVue">Développeur Web et Web
+            Mobile</span> organisée par Ndovoo et <a href="https://www.cariforef-mayotte.yt" target="_blank">CARIF-OREF 976</a>.</p>
         <p>Tous droits réservés <span id="annee"></span></p>
     </footer>
 
