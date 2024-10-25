@@ -19,22 +19,15 @@ function afficheJournee(heure) {
     return "Bonsoir";
 }
 
-nom.addEventListener("change", (event) => {
-    if (event.target.value !== "" && event.target.value !== "\n" && event.target.value !== "\t" && event.target.value !== " ") {
-        console.log("Yo man");
-    }
-});
+// nom.addEventListener("change", (event) => {
+//     if (event.target.value !== "" && event.target.value !== "\n" && event.target.value !== "\t" && event.target.value !== " ") {
+//         console.log("Yo man");
+//     }
+// });
 
 const elementInputNom = document.querySelector("#nom");
-console.log(elementInputNom);
-
-// 2. Ecouter l'événement Change, puis exécuter le code
-elementInputNom.addEventListener("change", () => {
-    console.log(" -== J'ai entendu change :- )");
-});
 
 const elementInputPrenom = document.querySelector("#prenom");
-console.log(elementInputPrenom);
 
 let messageSalutation;
 
@@ -43,11 +36,7 @@ elementInputPrenom.addEventListener("change", (event) => {
 
     if (event.target.value !== "" && event.target.value !== "\n" && event.target.value !== "\t" && event.target.value !== " ") {
 
-        console.log(dateAujourdHui.getHours());
-
         let laJournee = afficheJournee(dateAujourdHui.getHours());
-
-        console.log("Le change est : ", event.target.value);
 
         messageSalutation = `${laJournee} ${event.target.value}`;
 

@@ -9,10 +9,10 @@ const formulaire = document.querySelector("form");
 function estVide(valeurChamps) {
     // return valeurChamps === "";
     if (valeurChamps === "") {
-        console.log("Champs est vide !");
+        // console.log("Champs est vide !");
         return true
     }else {
-        console.log(`Le champs a pour valeur : ${valeurChamps}`);
+        // console.log(`Le champs a pour valeur : ${valeurChamps}`);
         return false;
     }
 
