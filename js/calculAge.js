@@ -52,6 +52,7 @@ function elementRadio(listeElements){
 // Declanchement de l'action affichage de l'age quand le bouton "valider" est clicker
 bouton.addEventListener("click", () => {
     // On va faire ne sorte que l'affichage soit clean
+    affichage.style = "display:block;";
     affichage.innerHTML = "";
     // console.clear()
 
